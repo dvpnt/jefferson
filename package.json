@@ -24,6 +24,7 @@
     "underscore": "1.8.3"
   },
   "devDependencies": {
+    "coveralls": "2.11.12",
     "eslint": "3.5.0",
     "eslint-config-dvpnt": "1.2.0",
     "expect.js": "0.3.1",
