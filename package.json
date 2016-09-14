@@ -1,0 +1,43 @@
+{
+  "name": "jefferson",
+  "version": "0.0.1",
+  "description": "json schema validator with data modifying features",
+  "main": "index.js",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dvpnt/jefferson.git"
+  },
+  "author": "Aleksey Timchenko <flegmatik.bel@gmail.com>",
+  "keywords": [
+    "json",
+    "schema",
+    "validator"
+  ],
+  "scripts": {
+    "lint": "eslint ./",
+    "test": "mocha test/ --reporter spec --bail",
+    "coverage": "nyc npm run test"
+  },
+  "dependencies": {
+    "ajv": "4.7.0",
+    "underscore": "1.8.3"
+  },
+  "devDependencies": {
+    "eslint": "3.5.0",
+    "eslint-config-dvpnt": "1.2.0",
+    "expect.js": "0.3.1",
+    "mocha": "3.0.2",
+    "nyc": "8.1.0"
+  },
+  "nyc": {
+    "reporter": [
+      "lcov",
+      "text-summary"
+    ],
+    "exclude": [
+      "node_modules/**",
+      "test/**"
+    ]
+  }
+}
