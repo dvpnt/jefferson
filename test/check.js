@@ -45,17 +45,21 @@ describe('check', function() {
 	});
 
 	it('should be called with correct arguments for scalar', function() {
+		var called;
 		jefferson.validate({
 			check: function(value, parent, propertyName) {
 				expect(value).to.eql('bar');
 				expect(parent).not.ok();
 				expect(propertyName).not.ok();
+				called = true;
 				return true;
 			}
 		}, 'bar');
+		expect(called).to.be.ok();
 	});
 
 	it('should be called with correct arguments for object', function() {
+		var called;
 		jefferson.validate({
 			properties: {
 				foo: {
@@ -64,10 +68,12 @@ describe('check', function() {
 						expect(value).to.eql('bar');
 						expect(parent).to.eql({foo: 'bar'});
 						expect(propertyName).to.eql('foo');
+						called = true;
 						return true;
 					}
 				}
 			}
 		}, {foo: 'bar'});
+		expect(called).to.be.ok();
 	});
 });
