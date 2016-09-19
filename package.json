@@ -29,16 +29,6 @@
     "eslint-config-dvpnt": "1.2.0",
     "expect.js": "0.3.1",
     "mocha": "3.0.2",
-    "nyc": "8.1.0"
-  },
-  "nyc": {
-    "reporter": [
-      "lcov",
-      "text-summary"
-    ],
-    "exclude": [
-      "node_modules/**",
-      "test/**"
-    ]
+    "nyc": "8.3.0"
   }
 }

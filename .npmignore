@@ -7,3 +7,4 @@ coverage/
 .npmignore
 .gitignore
 .travis.yml
+.nycrc
