@@ -48,7 +48,7 @@ describe('utils', function() {
 					b: {}
 				},
 				required: ['x', 'a']
-			})
+			});
 		});
 	});
 });
